@@ -26,7 +26,7 @@
 		<description>A means to communicate our culture from generation to generation in the hearts and minds of our people through speech and memorization.</description>
 		<issue>Ritual</issue>
 		<impact>Medium</impact>
-		<iconPath>UI/Abilities/ConversionRitual</iconPath>
+		<iconPath>UI/Precepts/OralTraditionSymbol</iconPath>
 		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>OralTradition</ritualPatternBase>
 		<allowDuplicates>false</allowDuplicates>
@@ -82,7 +82,7 @@
         <id>speaker</id>
         <precept>IdeoRole_Moralist</precept>
         <required>True</required>
-        <substitutable>True</substitutable>
+        <substitutable>False</substitutable>
 		<maxCount>1</maxCount>
         <countsAsParticipant>False</countsAsParticipant>
       </li>
