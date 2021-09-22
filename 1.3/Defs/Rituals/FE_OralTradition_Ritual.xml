@@ -107,7 +107,7 @@
 		</stages>
 	</RitualBehaviorDef>
 	<InteractionDef>
-		<defName>Speech_LiteraryTradition</defName>
+		<defName>Speech_OralTradition</defName>
 		<label>leader speech</label>
 		<workerClass>InteractionWorker</workerClass>
 		<ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>

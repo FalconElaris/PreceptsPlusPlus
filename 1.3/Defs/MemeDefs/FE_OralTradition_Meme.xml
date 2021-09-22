@@ -43,7 +43,7 @@
 					<li>lesson(tag=meme_OralTradition)              ->traditions must be taught to preserve culture, and there is no more effective method in all societies.</li>
 					<li>lessonReinforcement(tag=meme_OralTradition) ->If you are gifted with the ability to remember the ways of the ancestors and speak them with conviction, you will be honored all your life.</li>
 					<!-- animist -->
-					<li>animistBasis(tag=meme_OralTradition)    ->In the beginning, the spirits had to reveal their lessons to each successive generation as they were eternal. Only through oral tradition were they able to preserve their teachings for morals.</li>
+					<li>animistBasis(tag=meme_OralTradition)    ->In the beginning, the spirits had to reveal their lessons to each successive generation as they were eternal. Only through oral tradition were they able to preserve their teachings for mortals.</li>
 					<li>animistFact(tag=meme_OralTradition)     ->Spirits' truths cannot be written; they must be heard. We teach our children as the spirits taught our ancestors.</li>
 				</rulesStrings>
 			</rules>
