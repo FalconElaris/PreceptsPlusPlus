@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Verse;
+﻿using Verse;
 using RimWorld;
 using HarmonyLib;
 using UnityEngine;
@@ -39,7 +34,17 @@ namespace PreceptsPlusPlus
             new Harmony("FalconElaris.PreceptsPlusPlus").PatchAll(); //Applies all harmony patches.
         }
     }
-
+    /*
+    [DefOf]
+    public static class PreceptDefOfLiteraryTradition {
+        static PreceptDefOfLiteraryTradition() {
+            DefOfHelper.EnsureInitializedInCtor(typeof(PreceptDefOf));
+        }
+        //Respected/Honored cancelling precepts
+        public static PreceptDef LiteraryTraditionDontcare;
+        public static PreceptDef LiteraryTraditionHonored;
+        public static PreceptDef LiteraryTraditionRespected;
+    }*/
 
 
 }
