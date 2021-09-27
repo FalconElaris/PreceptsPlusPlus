@@ -76,41 +76,4 @@
     <defaultSelectionWeight>20</defaultSelectionWeight>
   </PreceptDef>
   
-  <!-- Thougths -->
-  <ThoughtDef>
-    <defName>RecentOralTradition_Honored</defName>
-    <workerClass>PreceptsPlusPlus.ThoughtWorker_Precept_OralTradition</workerClass>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>recent cultural exposition</label>
-        <description>We recently heard the stories of our ancestors. We make them proud!</description>
-        <baseMoodEffect>12</baseMoodEffect>
-      </li>
-      <li>
-        <label>no recent cultural exposition</label>
-        <description>It's been far too long since we heard about our culture. We're straying from the path!</description>
-        <baseMoodEffect>-12</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-  
-  <ThoughtDef>
-    <defName>RecentOralTradition_Respected</defName>
-    <workerClass>PreceptsPlusPlus.ThoughtWorker_Precept_OralTradition</workerClass>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <label>recent cultural exposition</label>
-        <description>We recently heard the stories of our culture.</description>
-        <baseMoodEffect>6</baseMoodEffect>
-      </li>
-      <li>
-        <label>no recent cultural exposition</label>
-        <description>It's been a while since we heard about our culture. We might need to do so soon.</description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-  
 </Defs>
