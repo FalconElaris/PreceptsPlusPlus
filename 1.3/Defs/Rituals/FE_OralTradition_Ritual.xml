@@ -255,62 +255,6 @@
 	</modExtensions>
   </RitualOutcomeEffectDef>
 	
-  <ThoughtDef>
-    <defName>TerribleRevelation</defName>
-    <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
-    <stackLimit>3</stackLimit>
-    <stages>
-      <li>
-        <label>terrible ritual</label>
-        <description>Our ways are all but lost!</description>
-        <baseMoodEffect>-6</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>BadSpokenTradition</defName>
-    <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
-    <stackLimit>3</stackLimit>
-    <stages>
-      <li>
-        <label>bad ritual</label>
-        <description>Our traditions are murky and uncertain.</description>
-        <baseMoodEffect>-2</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>SatisfyingExpositionofLore</defName>
-    <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
-    <stackLimit>3</stackLimit>
-    <stages>
-      <li>
-        <label>satisfying ritual</label>
-        <description>We are following the right way of living.</description>
-        <baseMoodEffect>2</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <ThoughtDef>
-    <defName>SpectacularRevelationOfProphesy</defName>
-    <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
-    <stackLimit>3</stackLimit>
-    <stages>
-      <li>
-        <label>inspiring ritual</label>
-        <description>Our ancestors smile upon us for following their ways so well!</description>
-        <baseMoodEffect>6</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-	
   <HediffDef>
     <defName>OralResearchSpeedUp</defName>
     <label>Cultural Inspiration</label>
