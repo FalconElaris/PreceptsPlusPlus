@@ -11,7 +11,7 @@
   <IssueDef>
     <defName>AnimalMaterialSource</defName>
     <label>animal apparel material</label>
-    <iconPath>UI/Precepts/ApparelMaterialLeatheryWoolenSymbol</iconPath>
+    <iconPath>UI/Precepts/AnimalApparelSymbol</iconPath>
   </IssueDef>
 
   <!-- Precepts -->
