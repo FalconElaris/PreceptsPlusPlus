@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--I may eventually add this as a precept, but it would involve adding a status effect to corpses and require a new workbench and sorting category, etc-->
+
+<Defs>
+  <!--<HistoryEventDef>
+    <defName>EmbalmedCorpse</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>DisposeOfUnembalmedCorpse</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>EmbalmedCorpse</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>EmbalmedColonist</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>EmbalmedGuest</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>EmbalmedPrisoner</defName>
+    <label>embalmed a corpse</label>
+  </HistoryEventDef>
+  
+  <IssueDef>
+    <defName>Embalmbing</defName>
+    <label>embalmbing</label>
+    <iconPath>UI/Precepts/AfterlifeJourneySymbol</iconPath>
+  </IssueDef>
+  
+  <PreceptDef>
+    <defName>Embalming_Good</defName>
+    <issue>Embalmbing</issue>
+    <label>necessary</label>
+    <description>Embalming is a necessary step in preparing a corpse!</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>40</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+	<selectionWeight>0.75</selectionWeight>
+    <associatedMemes>
+      <li>AfterlifeJourney</li>
+    </associatedMemes>
+    <exclusionTags>
+      <li>EmbalmingIsBad</li>
+    </exclusionTags>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Embalmed_Happy</thought>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>DisposeOfUnembalmedCorpse</eventDef>
+        <thought>Unembalmed_Corpse_Bad</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>UnembalmedCorpse</eventDef>
+        <thought>Unembalmed_Corpse_Known_Bad</thought>
+        <description>Someone disposed of an unembalmed corpse</description>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>UnembalmedEmbalmedColonist</eventDef>
+        <thought>Unembalmed_Colonist_Know_Bad_Mood</thought>
+        <description>Someone disposed of a unembalmed colonist's corpse!</description>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>EmbalmedGuest</eventDef>
+        <thought>Unembalmed_Guest_Know_Bad_Mood</thought>
+        <description>Someone disposed of a unembalmed guest's corpse!</description>
+      </li>
+    </comps>
+  </PreceptDef> 
+  
+  <PreceptDef>
+    <defName>Embalming_Bad</defName>
+    <issue>Embalmbing</issue>
+    <label>unacceptable</label>
+    <description>Embalming is a desecration of a corpse!</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>40</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+	<selectionWeight>0.75</selectionWeight>
+    <associatedMemes>
+      <li>AfterlifeJourney</li>
+    </associatedMemes>
+    <exclusionTags>
+      <li>EmbalmingIsGood</li>
+    </exclusionTags>
+    <comps>
+	  <li Class="PreceptComp_UnwillingToDo">
+        <eventDef>EmbalmedCorpse</eventDef>
+      </li>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>EmbalmedCorpse</eventDef>
+        <thought>Embalmed_Corpse_Bad</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>EmbalmedCorpse</eventDef>
+        <thought>Embalmed_Corpse_Known_Bad</thought>
+        <description>Embalmed a Corpse</description>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>EmbalmedColonist</eventDef>
+        <thought>EmbalmedColonist_Know_Bad_Mood</thought>
+        <description>Someone embalmed a colonist</description>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>EmbalmedGuest</eventDef>
+        <thought>EmbalmedGuest_Know_Bad_Mood</thought>
+        <description>Someone embalmed a guest</description>
+      </li>
+    </comps>
+  </PreceptDef>
+  
+  <PreceptDef>
+    <defName>Embalming_Indifferent</defName>
+    <issue>Embalmbing</issue>
+    <label>don't care</label>
+    <description>It doesn't matter if we embalm a corpse.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>40</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+	<selectionWeight>0.75</selectionWeight>
+    <exclusionTags>
+      <li>EmbalmingIsGood</li>
+      <li>EmbalmingIsBad</li>
+    </exclusionTags>
+  </PreceptDef>
+ -->
+</Defs>

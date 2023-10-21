@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--Shared Ritual Resources-->
+	<RitualBehaviorDef ParentName="IdeoFuneral">
+		<defName>AfterlifeJourney_CairnBuildingRitual</defName>
+		<durationTicks>5000</durationTicks>
+		<stages Inherit="False">
+			<li>
+				<defaultDuty>SpectateBuildingCairn</defaultDuty>
+				<spectateDistanceOverride>2~3</spectateDistanceOverride>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>1</percentage>
+					</li>
+				</endTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>moralist</roleId>
+						<dutyDef>SpeakOnCellFuneral</dutyDef>
+						<speakerInteraction>Speech_Funeral</speakerInteraction>
+						<customPositions>
+							<li Class="RitualPosition_Lectern">
+								<maxDistanceToFocus>5</maxDistanceToFocus>
+							</li>
+						</customPositions>
+					</li>
+				</roleBehaviors>
+				<visualEffectDef>Funeral</visualEffectDef>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+	<RitualVisualEffectDef>
+		<defName>AfterlifeJourney_CairnBuildingEffect</defName>
+		<comps>
+			<li>
+				<compClass>CompRitualEffect_ConstantCenter</compClass>
+				<moteDef>Mote_RitualGlowSingleRay</moteDef>
+				<offset>(0.8, 0.5, 3.5)</offset>
+			</li>
+		</comps>
+	</RitualVisualEffectDef>
+	<RitualOutcomeEffectDef Name="AttendedCairnBuildingBase" ParentName="AttendedFuneralBase" Abstract="True">
+		<description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+		<workerClass>MorePrecepts.RitualOutcomeEffectWorker_BuildCairn</workerClass>
+	</RitualOutcomeEffectDef>
+	<!--Build Cairn with a Corpse-->
+	<RitualPatternDef>
+		<defName>AfterlifeJourney_CairnBuildingRitual</defName>
+		<nameMaker>NamerRitual_BuildCairn</nameMaker>
+		<ritualExpectedDesc>Once a {IDEO} member dies, other {MEMBERS} gather to build a cairn for {RITUAL_labelDef}.</ritualExpectedDesc>
+		<ritualExpectedPostfix>{0} {1} want to erect the cairn as soon as possible.</ritualExpectedPostfix>
+		<ritualObligationTriggers>
+			<li Class="RitualObligationTrigger_MemberDiedProperties">
+				<mustBePlayerIdeo>true</mustBePlayerIdeo>
+			</li>
+		</ritualObligationTriggers>
+		<ritualObligationTargetFilter>EmptyCairnWithTargetsCorpse</ritualObligationTargetFilter>
+		<ritualBehavior>AfterlifeJourney_CairnBuilding</ritualBehavior>
+		<ritualOutcomeEffect>AttendedCairnBuilding</ritualOutcomeEffect>
+	</RitualPatternDef>
+	<RitualObligationTargetFilterDef>
+		<defName>EmptyCairnWithTargetsCorpse</defName>
+		<workerClass>PreceptsPlusPlus.RitualObligationTargetWorker_BuildCairnWithTarget</workerClass>
+		<thingDefs>
+			<li>Cairn</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+	<RitualOutcomeEffectDef ParentName="AttendedCairnBuildingBase">
+		<defName>AttendedCairnBuilding</defName>
+		<comps>
+			<li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+				<roleId>moralist</roleId>
+				<label>moral guide present</label>
+				<qualityOffset>0.3</qualityOffset>
+			</li>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.5)</li>
+						<li>(10, 0.7)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+	<!--Build Cairn without a Corpse-->
+	<RitualPatternDef>
+		<defName>AfterlifeJourney_CairnBuildingRitualNoCorpse</defName>
+		<ritualExpectedDesc>Once a {IDEO} member dies and the body is lost, other {MEMBERS} gather around an empty cairn for {RITUAL_labelDef}.</ritualExpectedDesc>
+		<ritualObligationTriggers>
+			<li Class="RitualObligationTrigger_MemberCorpseDestroyedProperties">
+				<mustBePlayerIdeo>true</mustBePlayerIdeo>
+			</li>
+		</ritualObligationTriggers>
+		<ritualObligationTargetFilter>EmptyCairn</ritualObligationTargetFilter>
+		<ritualBehavior>AfterlifeJourney_CairnBuilding</ritualBehavior>
+		<ritualOutcomeEffect>AttendedCairnBuildingNoCorpse</ritualOutcomeEffect>
+	</RitualPatternDef>
+	<RitualObligationTargetFilterDef>
+		<defName>EmptyCairn</defName>
+		<workerClass>PreceptsPlusPlus.RitualObligationTargetWorker_AnyEmptyCairn</workerClass>
+		<thingDefs>
+			<li>Cairn</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+	<RitualOutcomeEffectDef ParentName="AttendedCairnBuildingBase">
+		<defName>AttendedCairnBuildingNoCorpse</defName>
+		<comps>
+			<li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+				<roleId>moralist</roleId>
+				<label>moral guide present</label>
+				<qualityOffset>0.2</qualityOffset>
+			</li>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.4)</li>
+						<li>(10, 0.6)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+</Defs>

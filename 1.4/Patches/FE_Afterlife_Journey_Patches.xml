@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAttributeAdd">
+		<xpath>/Defs/RitualBehaviorDef[defName="Funeral"]</xpath>
+		<attribute>Name</attribute>
+		<value>IdeoFuneral</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/PreceptDef[defName="IdeoBuilding"]/buildingDefChances</xpath>
+		<value>
+			<Cairn>0</Cairn>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RitualAttachableOutcomeEffectDef[defName="RandomRecruit"]/disallowedRituals</xpath>
+		<value>
+			<li>AfterlifeJourney_CairnBuilding</li>
+			<li>AfterlifeJourney_CairnBuildingNoCorpse</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/PreceptDef[defName="Funeral"]/exclusionTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="Funeral"]</xpath>
+			<value>
+				<exclusionTags>
+					<li>Funeral</li>
+				</exclusionTags>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/PreceptDef[defName="Funeral"]/exclusionTags</xpath>
+			<value>
+				<li>Funeral</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

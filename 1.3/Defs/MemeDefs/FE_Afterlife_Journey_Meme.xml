@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<MemeDef>
+		<defName>AfterlifeJourney</defName>
+		<label>afterlife journey</label>
+		<description>How we treat our dead affects their afterlife.</description>
+		<iconPath>UI/Memes/AfterlifeJourneyMeme</iconPath>
+		<groupDef>Misc</groupDef>
+		<impact>2</impact>
+		<renderOrder>998</renderOrder>
+		<requireOne>
+			<li>
+				<li>AfterlifeJourney_CairnBuilding</li>
+				<!--
+			<li>AfterlifeJourney_TombBuilding</li>
+			<li>AfterlifeJourney_Skyburial</li>
+			<li>AfterlifeJourney_GraveDigging</li>
+			<li>AfterlifeJourney_Cremation</li>
+			-->
+				<!--<li>AfterlifeJourney_Embalming</li>-->
+				<!--<li>AfterlifeJourney_Corpses_Untouchable</li>-->
+				<!--<li>Corpses_Ugly</li> Vanilla-->
+				<!--<li>Corpses_DontCare</li> Ideo-->
+				<!--<li>AfterlifeJourney_Corpses_Cherished</li>-->
+			</li>
+		</requireOne>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->lifeless</li>
+				<li>memeAdjective->dead</li>
+				<li>memeAdjective->lost</li>
+				<li>memeAdjective->deceased</li>
+				<li>memeAdjective->expired</li>
+				<li>memeConcept->death</li>
+				<li>memeConcept->the beyond</li>
+				<li>memeConcept->passing on</li>
+				<li>memeConcept->afterlife</li>
+				<li>memeConcept->final succession</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>episode(uses=1,tag=meme_AfterlifeJourney)  ->[deity0_name] always lead the dead from this world to the next and taught we mortals how to prepare the dead for [memeConcept].</li>
+					<!-- theist founder -->
+					<li>intro(tag=meme_AfterlifeJourney)           ->[deity0_name] saw the suffering of [memberNamePlural] at their [memeAdjective] loved one's inability to go on.</li>
+					<li>founderJoin(tag=meme_AfterlifeJourney)     ->A [place_job] named [founderName] was blessed by [deity0_name]. [deity0_name] revealed to [founderName] [revelationAdverb] the  journey to the afterlife.</li>
+					<!-- ideological founder -->
+					<li>story(uses=1,tag=meme_AfterlifeJourney)    ->[founderName] showed the people methods to ensure [memeAdjective] [memberNamePlural] could pass rightly from this world.</li>
+					<!-- ideological lesson -->
+					<li>lesson(tag=meme_AfterlifeJourney)              ->The [memeAdjective] must be handled with reverence and care.</li>
+					<li>lessonReinforcement(tag=meme_AfterlifeJourney) ->The [memeAdjective]s' path from this world in [memeConcept] must be properly prepared by the living.</li>
+					<!-- animist -->
+					<li>animistBasis(tag=meme_AfterlifeJourney)    ->All things become [memeAdjective], they become good spirits around us if we prepare their [memeConcept] with conviction.</li>
+					<li>animistFact(tag=meme_AfterlifeJourney)     ->The spirits' of the [memeAdjective] are angry should we fail to ensure their deaths are handled correctly.</li>
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<symbolPacks>
+			<li>
+				<ideoName>Afterlife Journey</ideoName>
+				<theme>afterlife journey</theme>
+				<adjective>morbid</adjective>
+				<member>grave watcher</member>
+			</li>
+			<li>
+				<ideoName>Psychopomp</ideoName>
+				<theme>psychopomp</theme>
+				<adjective>morbid</adjective>
+				<member>undertaker</member>
+			</li>
+		</symbolPacks>
+		<thingStyleCategories>
+			<li>
+				<category>Morbid</category>
+				<priority>2</priority>
+			</li>
+		</thingStyleCategories>
+		<requiredRituals>
+			<li>
+				<precept>AfterlifeJourney_CairnBuilding</precept>
+				<pattern>AfterlifeJourney_CairnBuildingRitual</pattern>
+				<building>Cairn</building>
+			</li>
+		</requiredRituals>
+		<ritualsToMake>1</ritualsToMake>
+		<addDesignators>
+			<li>Cairn</li>
+		</addDesignators>
+		<agreeableTraits/>
+		<disagreeableTraits/>
+	</MemeDef>
+</Defs>

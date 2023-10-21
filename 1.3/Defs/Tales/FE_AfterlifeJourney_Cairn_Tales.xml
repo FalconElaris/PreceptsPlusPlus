@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TaleDef>
+		<defName>BuiltCairn</defName>
+		<label>built a cairn</label>
+		<taleClass>Tale_DoublePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>2</baseInterest>
+		<firstPawnSymbol>ORGANIZER</firstPawnSymbol>
+		<secondPawnSymbol>CORPSE</secondPawnSymbol>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[ORGANIZER_nameDef] encasing [CORPSE_nameDef] in a burial cairn</li>
+				<li>tale_noun->[ORGANIZER_nameDef] laying [CORPSE_nameDef] to rest in a [ritualcairn] of [keyDeity]</li>
+				<li>image->[ORGANIZER_nameFull] standing next to [CORPSE_nameFull]'s cairn [circumstance_group]</li>
+				<li>image->[ORGANIZER_nameFull] sitting next to [CORPSE_nameFull]'s cairn [circumstance_group]</li>
+				<li>image->[ORGANIZER_nameFull] observing [CORPSE_nameFull]'s cairn [circumstance_group]</li>
+				<li>image->[ORGANIZER_nameFull] placing [CORPSE_nameFull]'s body in the [ritualcairn] of [keyDeity] [circumstance_group]</li>
+				<li>image->[ORGANIZER_nameFull] encasing [CORPSE_nameFull]'s body into the cairn [circumstance_group]</li>
+				<li>circumstance_phrase->with a [AdjectiveAngsty] expression</li>
+				<li>circumstance_phrase->and consumed by the gravity of [ORGANIZER_objective] act</li>
+				<li>circumstance_phrase->while gazing at a distant [TerrainFeature]</li>
+				<li>circumstance_phrase->and talking quietly to [ORGANIZER_objective]self</li>
+				<li>desc_sentence->A [Color] aurora shines in the sky.</li>
+				<li>desc_sentence->Above the [ritualcairn], the sky seems to shimer.</li>
+				<li>desc_sentence->A spectral image of [CORPSE_nameDef] down from atop the [ritualcairn] with a [AdjectiveFriendly] expression.</li>
+				<li>desc_sentence->A spectral image of [CORPSE_nameDef] stands next to [ORGANIZER_nameDef], wearing a [AdjectiveFriendly] expression.</li>
+				<li>desc_sentence->A spectral image of [CORPSE_nameDef] down from atop the [ritualcairn] with a [AdjectiveAngsty] expression.</li>
+				<li>desc_sentence->A spectral image of [CORPSE_nameDef] stands next to [ORGANIZER_nameDef], wearing a [AdjectiveAngsty] expression.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Animal]s rest near the scene.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+</Defs>

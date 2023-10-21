@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- HistoryEvents -->
+	<!--
+  <HistoryEventDef>
+    <defName>Cremated_Colonist_Corpse</defName>
+    <label>cremated a colonist's corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>Cremated_Guest_Corpse</defName>
+    <label>cremated a guest's corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>Buried_Colonist_Corpse</defName>
+    <label>buried a colonist's corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>Buried_Guest_Corpse</defName>
+    <label>buried a guest's corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>Entombed_Colonist_Corpse</defName>
+    <label>entombed a colonist's corpse</label>
+  </HistoryEventDef>
+  <HistoryEventDef>
+    <defName>Entombed_Guest_Corpse</defName>
+    <label>entombed a guest's corpse</label>
+  </HistoryEventDef>-->
+	<IssueDef>
+		<defName>AfterlifeJourney</defName>
+		<label>afterlife journey</label>
+		<iconPath>UI/Precepts/AfterlifeJourneySymbol</iconPath>
+	</IssueDef>
+	<PreceptDef Name="AfterlifeJourneyBase" ParentName="FuneralBase" Abstract="True">
+		<iconPath>UI/Precepts/AfterlifeJourneySymbol</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<classicExtra>false</classicExtra>
+		<impact>Low</impact>
+		<displayOrderInIssue>40</displayOrderInIssue>
+		<displayOrderInImpact>1000</displayOrderInImpact>
+		<associatedMemes>
+			<li>AfterlifeJourney</li>
+		</associatedMemes>
+		<requiredMemes>
+			<li>AfterlifeJourney</li>
+		</requiredMemes>
+	</PreceptDef>
+	<PreceptDef ParentName="AfterlifeJourneyBase">
+		<defName>AfterlifeJourney_CairnBuilding</defName>
+		<issue>AfterlifeJourney</issue>
+		<label>cairns</label>
+		<description>We build great cairns to memorialize our departed colonists.</description>
+		<ritualPatternBase>AfterlifeJourney_CairnBuildingRitual</ritualPatternBase>
+		<extraTextPawnDeathLetter>A cairn should be built for {PAWN_nameDef} so {PAWN_possessive} friends and family can remember them.</extraTextPawnDeathLetter>
+		<alsoAdds>AfterlifeJourney_CairnBuildingNoCorpse</alsoAdds>
+		<exclusionTags>
+			<li>Funeral</li>
+		</exclusionTags>
+		<!--<comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Cairn_In_Colony</thought>
+        <thoughtStageDescriptions>
+          <li>Cairns missing {STAGE1}</li>
+          <li>Cairns built {STAGE2}</li>
+        </thoughtStageDescriptions>
+      </li>
+    </comps>-->
+	</PreceptDef>
+	<PreceptDef ParentName="AfterlifeJourneyBase">
+		<defName>AfterlifeJourney_CairnBuildingNoCorpse</defName>
+		<visible>false</visible>
+		<listedForRoles>false</listedForRoles>
+		<issue>AfterlifeJourney</issue>
+		<label>cairns (no corpse)</label>
+		<ritualPatternBase>AfterlifeJourney_CairnBuildingRitualNoCorpse</ritualPatternBase>
+		<takeNameFrom>AfterlifeJourney_CairnBuilding</takeNameFrom>
+	</PreceptDef>
+	<!--
+  <PreceptDef ParentName="AfterlifeJourneyBase">
+    <defName>AfterlifeJourney_TombBuilding</defName>
+    <issue>AfterlifeJourney</issue>
+    <label>Tombs</label>
+    <description>We build great tombs where the dead may rest.</description>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Tomb_In_Colony</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  
+  <PreceptDef ParentName="AfterlifeJourneyBase">
+    <defName>AfterlifeJourney_Skyburial</defName>
+    <issue>AfterlifeJourney</issue>
+    <label>Skyburial</label>
+    <description>We allow those who have passed to be recieved by the sky.</description>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Buried_Sky</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  
+  <PreceptDef ParentName="AfterlifeJourneyBase">
+    <defName>AfterlifeJourney_GraveDigging</defName>
+    <issue>AfterlifeJourney</issue>
+    <label>Graves</label>
+    <description>We bury the dead in the earth.</description>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Grave_In_Colony</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  
+  <PreceptDef>
+    <defName>AfterlifeJourney_Cremation</defName>
+    <issue>AfterlifeJourney</issue>
+    <label>Cremation</label>
+    <description>We cremate the bodies of the dead.</description>
+    <comps>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Cremated_Corpse</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  -->
+</Defs>

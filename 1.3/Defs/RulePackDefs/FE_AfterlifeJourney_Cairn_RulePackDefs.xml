@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<RulePackDef>
+		<defName>Namer_Cairn</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>buildingName->cairn</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	<RulePackDef>
+		<defName>NamerRitual_BuildCairn</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName(p=2)->[memeAdjective] [ritualcairn]</li>
+				<li>r_ritualName->[ritualcairn] of [chosenTheme]</li>
+				<li>r_ritualName->[chosenAdjective] [ritualcairn]</li>
+				<li>r_ritualName->[keyDeity]'s [ritualcairn]</li>
+				<li>r_ritualName->[ritualcairn] of [keyDeity]</li>
+				<li>r_ritualName->[ritualcairn] of [memeConcept]</li>
+				<li>r_ritualName->[ritualcairn] of [chosenIdeoName]</li>
+				<li>ritualcairn->cairn</li>
+				<li>ritualcairn->mound</li>
+				<li>ritualcairn->eulogy</li>
+				<li>ritualcairn->encasing</li>
+				<li>ritualcairn->requiem</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	<RulePackDef>
+		<defName>NamerArt_CairnPlate</defName>
+		<include>
+			<li>NamerArtCommon</li>
+		</include>
+	</RulePackDef>
+	<RulePackDef>
+		<defName>ArtDescription_CairnPlate</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>physical_description_root->The cairn's surface is engraved with a [depiction] of [image]. [desc_sentence_group]</li>
+				<li>physical_description_root->The cairn displays a [depiction] of [image]. [desc_sentence_group]</li>
+				<li>physical_description_root->The cairn is engraved with a [depiction] of [image]. [desc_sentence_group]</li>
+				<li>physical_description_root->An engraving on this cairn [depicts] [image]. [desc_sentence_group]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+</Defs>
