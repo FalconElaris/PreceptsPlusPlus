@@ -14,9 +14,9 @@
         <displayName>Ideology</displayName>
     </li>
 	<li>
-        <packageId>Zezz.PandM</packageId>
-        <displayName>Precepts and Memes</displayName>
-        <steamWorkshopUrl>steam://url/CommunityFilePage/2582413611</steamWorkshopUrl>
+        <packageId>Mlie.PreceptsAndMemes</packageId>
+        <name>Precepts and Memes (Continued)</name>
+        <url>https://github.com/emipa606/PreceptsAndMemes</url>
     </li>
 	<li>
 		<packageId>thesepeople.ritualattachableoutcomes</packageId>
